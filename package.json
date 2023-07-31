@@ -18,5 +18,8 @@
   "homepage": "https://github.com/hola-soy-milk/verify-bot#readme",
   "dependencies": {
     "discord.js": "^14.12.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.0"
   }
 }
