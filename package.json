@@ -1,0 +1,22 @@
+{
+  "name": "verify-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hola-soy-milk/verify-bot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hola-soy-milk/verify-bot/issues"
+  },
+  "homepage": "https://github.com/hola-soy-milk/verify-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.12.0"
+  }
+}
