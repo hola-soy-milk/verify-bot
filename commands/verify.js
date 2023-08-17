@@ -37,6 +37,7 @@ module.exports = {
       }
       } catch(e) {
         console.log('err: unknown member', user.displayName);
+        await reaction?.users.remove(user.id);
       }
     });
     await interaction.reply(`Verifying members`);
