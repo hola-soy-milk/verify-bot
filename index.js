@@ -7,7 +7,18 @@ const token = process.env.DISCORD_TOKEN;
 console.log(token);
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+// new Intents(7796)
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildEmojisAndStickers,
+    GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+  ],
+});
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, "commands");
 const commandFiles = fs
@@ -38,7 +49,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   }
 
   try {
-    await command.execute(interaction);
+    await command.execute(client, interaction);
   } catch (error) {
     console.error(error);
     if (interaction.replied || interaction.deferred) {
