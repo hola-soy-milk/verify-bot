@@ -8,7 +8,7 @@ const serverID = process.env.SERVER_ID;
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("verify")
-    .setDescription("Replies with Pong!"),
+    .setDescription("Replies with whether users are verified!"),
   async execute(client, interaction) {
     const channel = await client.channels.fetch(channelID);
     const message = await channel.messages.fetch(messageID);
