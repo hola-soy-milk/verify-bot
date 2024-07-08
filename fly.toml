@@ -1,8 +1,22 @@
-# fly.toml app configuration file generated for bwc-verify-bot on 2023-07-31T23:40:10+02:00
+# fly.toml app configuration file generated for bwc-verify-bot-young-tree-2350 on 2024-07-08T10:20:48+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "bwc-verify-bot"
-primary_region = "ams"
+app = 'bwc-verify-bot-young-tree-2350'
+primary_region = 'ams'
 
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
