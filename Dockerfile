@@ -18,7 +18,7 @@ FROM base as build
 
 # Install packages needed to build node modules
 RUN apt-get update -qq && \
-    apt-get install -y build-essential pkg-config python
+    apt-get install -y build-essential pkg-config python3
 
 # Install node modules
 COPY --link package-lock.json package.json ./
